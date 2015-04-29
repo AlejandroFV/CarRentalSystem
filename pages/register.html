@@ -4,6 +4,7 @@
 		<title>Registrarse</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+		<script src="../layout/scripts/default.js"></script>
 	</head>
 
 	<body id="top">
@@ -32,17 +33,18 @@
 			<div id="container">
 				<div id="content">
 					<h2>Registrar una nueva cuenta</h2>
-					<form action="" method="post">
+					<form action="" name="form" method="post" onSubmit="return validateRegisterForm()">
 						<p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a></p>
 						<p>
 							<label for="email">Email:</label><br>
-							<input type="email" id="email" name="email" size="50"/><br>
+							<!-- <input type="email" id="email" name="email" size="50"/><br> -->
+							<input type="text" id="email" name="email" size="50"/><br>
 							<label for="password">Password:</label><br>
 							<input type="password" id="password" name="password" size="50"/><br>
 							<label for="confirmPassword">Confirmar password:</label><br>
 							<input type="password" name="confirmPassword" id="confirmPassword" size="50"><br>
 							<div>
-								<input type="submit" value="Iniciar sesión">
+								<input type="submit" value="Registrarse">
 								<a href="privacy.html">Política de Privacidad</a>
 							</div>
 						</p>
