@@ -4,6 +4,7 @@
 		<title>Iniciar sesión</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+		<script src="../layout/scripts/default.js"></script>
 	</head>
 
 	<body id="top">
@@ -32,11 +33,12 @@
 			<div id="container">
 				<div id="content">
 					<h2>Inicia sesión en tu cuenta</h2>
-					<form action="" method="post">
+					<form action="" name="form" method="post" onSubmit="return validateLoginForm()">
 						<p><a href="register.html">¿No tienes una cuenta? Crea una aquí</a></p>
 						<p>
 							<label for="email">Email:</label><br>
-							<input type="email" id="email" name="email" value="" size="50"/><br>
+							<!-- <input type="email" id="email" name="email" value="" size="50"/><br> -->
+							<input type="text" id="email" name="email" value="" size="50"/><br>
 							<label for="password">Password:</label><br>
 							<input type="password" id="password" name="password" value="" size="50"/><br>
 							<div>
