@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import url("navi.css");
 @import url("forms.css");
 @import url("tables.css");
@@ -18,7 +17,6 @@ body {
 	background-color: #333333;
 }
 
-
 .justify {
 	text-align: justify;
 }
@@ -35,12 +33,20 @@ body {
 	text-align: right;
 }
 
+.noList{
+	list-style-image: url('images/red_file.gif');
+}
+
 .nostart {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
+.title2{
+	color: #8B1616;
+	font-size: 28px;
+}
 
 .clear {
 	clear: both;
@@ -107,6 +113,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	font-weight: normal;
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
+
 
 .col1, .col1 a {
 	color: #FFFFFF;
