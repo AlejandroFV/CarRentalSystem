@@ -7,7 +7,7 @@
 	$DB_host = "127.0.0.1";
 	$DB_user = "root";
 	$DB_password = "";
-	$DB_name = "CRS";
+	$DB_name = "crs";
 
 	// Init the connection
 	$con = mysqli_connect($DB_host, $DB_user, $DB_password);

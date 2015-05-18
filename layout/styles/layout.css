@@ -48,6 +48,16 @@ body {
 	font-size: 28px;
 }
 
+.title3{
+	color: #1448A6;
+	font-size: 23px;
+}
+
+.title4{
+	color: #3DA026;
+	font-size: 19px;
+}
+
 .clear {
 	clear: both;
 }
@@ -266,7 +276,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #breadcrumb ul li.current a {
 	text-decoration: underline;
 }
-
 
 /*Content*/
 

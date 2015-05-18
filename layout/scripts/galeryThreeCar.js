@@ -7,16 +7,14 @@ var last;
 
 function inicializarVariables(){
 	images = new Array(6);
-	images[0] = "../images/PopularCarOne/one-01.png";
-	images[1] = "../images/PopularCarOne/one-02.png";
-	images[2] = "../images/PopularCarOne/one-03.png";
-	images[3] = "../images/PopularCarOne/one-04.png";
-	images[4] = "../images/PopularCarOne/one-05.png";
-	images[5] = "../images/PopularCarOne/one-06.png";
-	images[6] = "../images/PopularCarOne/one-07.png";
-	images[7] = "../images/PopularCarOne/one-08.png";
-	images[8] = "../images/PopularCarOne/one-09.png";
-	images[9] = "../images/PopularCarOne/one-10.png";
+	images[0] = "../images/PopularCarThree/three-01.png";
+	images[1] = "../images/PopularCarThree/three-02.png";
+	images[2] = "../images/PopularCarThree/three-03.png";
+	images[3] = "../images/PopularCarThree/three-04.png";
+	images[4] = "../images/PopularCarThree/three-05.png";
+	images[5] = "../images/PopularCarThree/three-06.png";
+	images[6] = "../images/PopularCarThree/three-07.png";
+	images[7] = "../images/PopularCarThree/three-08.png";
 	cont = 0;
 	first = 0;
 	last = images.length-1;

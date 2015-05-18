@@ -33,9 +33,11 @@
 			<div id="container">
 				<div id="content">
 					<h2>Registrar una nueva cuenta</h2>
-					<form action="" name="form" method="post" onSubmit="return validateRegisterForm()">
+					<form action="../layout/php/registerUser.php" name="form" method="post" onSubmit="return validateRegisterForm()" id="register">
 						<p><a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a></p>
 						<p>
+							<label for="name">Nombre:</label><br>
+							<input type="text" id="name" name="name" size="50"><br>
 							<label for="email">Email:</label><br>
 							<!-- <input type="email" id="email" name="email" size="50"/><br> -->
 							<input type="text" id="email" name="email" size="50"/><br>
@@ -44,7 +46,7 @@
 							<label for="confirmPassword">Confirmar password:</label><br>
 							<input type="password" name="confirmPassword" id="confirmPassword" size="50"><br>
 							<div>
-								<input type="submit" value="Registrarse">
+								<input type="submit" value="Registrarse" name="Registrarse">
 								<a href="privacy.html">Política de Privacidad</a>
 							</div>
 						</p>
@@ -69,6 +71,12 @@
 				<br class="clear" />
 			</div>
 		</div>
+
+		<?php
+			if(isset($_POST['Registrarse'])){
+				echo "Hola";
+			}
+		?>
 
 		<div class="wrapper col7">
 			<div id="copyright">
