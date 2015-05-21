@@ -3,19 +3,34 @@
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$confirmPassword = $_POST['confirmPassword'];
+	$password = md5($password);
+	$emailExistente = false;
 
 	require("connection.php");
-	$password = md5($password);
+	$scriptQueryAll = "SELECT * FROM user";
+	$resultAll = mysqli_query($con, $scriptQueryAll);
+	while ($valuesAll = mysqli_fetch_array($resultAll)) {
+		if ($email == $valuesAll[3]) {
+			$emailExistente = true;
+			break;
+		}
+	}
 
-	$scriptQuery = "INSERT INTO customer 
-	(name_customer, pass_customer, email_customer) 
-	VALUES ('$name', '$password', '$email')";
+	if (!$emailExistente) {
+		$scriptQuery = "INSERT INTO user
+		(name_user, pass_user, email_user, rol_user) 
+		VALUES ('$name', '$password', '$email', 'customer')";
+		mysqli_query($con, $scriptQuery);
 
-	echo $scriptQuery;
-
-	mysqli_query($con, $scriptQuery);
+		echo "<script>
+				alert('La cuenta ha sido creada exitosamente.');
+				window.location.href='../../pages/register.html';
+			</script>";
+	}else{
+		echo "<script>
+				alert('Ya existe una cuenta asociada al correo que ingreso.');
+				window.location.href='../../pages/register.html';
+			</script>";
+	}
 	mysqli_close($con);
-
-	header("location:../../pages/register.html");
 ?>

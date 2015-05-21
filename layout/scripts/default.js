@@ -18,11 +18,14 @@ function validateLoginForm() {
 	var password = document.forms["form"]["password"].value;
 	if (email == "" || password == "") {
 		alert("Debe de llenar todos los campos");
+		return false;
+	}else{
+		if (!validateEmail(email)) {
+			alert("Por favor escriba una dirección de correo válida");
+			return false;
+		}
+		document.getElementById("login").submit();
 	}
-	if (!validateEmail(email)) {
-		alert("Por favor escriba una dirección de correo válida");
-	}
-	return false;
 }
 
 function validateRegisterForm() {

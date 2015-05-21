@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,8 +15,19 @@
 			<div id="topbar">
 				<p>Tel: (999)2-19-43-79 | Mail: <a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a></p>
 				<ul>
-					<li><a href="pages/login.html">Iniciar Sesión</a></li>
-					<li class="last"><a href="pages/register.html">Registrarse</a></li>
+					<?php
+						if (!empty($_SESSION['nick_user'])){
+							$userName = $_SESSION['nick_user'];
+							echo "<li> Bienvenido: ".$userName."</li>";
+							echo "<li class='last'><a href='pages/login.html'>Cerrar sesión</a></li>";
+						}else{
+					?>
+							<li><a href="pages/login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="pages/register.html">Registrarse</a></li>
+					<?php
+						}
+					?>
+					
 				</ul>
 				<br class="clear" />
 			</div>
