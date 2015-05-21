@@ -4,9 +4,10 @@
 		<title>Tipos de pago</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+		<script src="../layout/scripts/galeryOneCar.js"></script>
 	</head>
 
-	<body id="top">
+	<body id="top" onload="inicializarVariables();">
 		<div class="wrapper col1">
 			<div id="topbar">
 				<p>Tel: (999)2-19-43-79 | Mail: <a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a></p>
@@ -49,16 +50,43 @@
 		
 		<div class="wrapper col5">
 			<div id="container">
-				<h2>Métodos de pago aceptados</h2>
-				<p>La información que se muestra aquí aplica con los pagos recibidos al rentar un vehículo en CRS.</p>
-				<p>Todos los usuarios pueden utilizar tarjetas:</p>
-				<ul>
-					<li>Visa</li>
-					<li>Visa Debit</li>
-					<li>Visa Electron</li>
-					<li>Mastercard</li>
-					<li>American Express</li>
-				</ul>
+				<div >
+					<h1>Auto popular #1: <strong>MAYBACH</strong></h1>
+					<img src="../images/PopularCarOne/one-01.png" width="577" height="393" alt="">
+					<p>
+						<h2>Caracteristicas del motor</h2>
+						<ul class="noList">
+							<li>Contiene doce cilindros.</li>
+							<li>5,5 litros con dos turbocompresores</li>
+							<li>551 CV</li>
+						</ul>
+					</p>
+					<div class="center">
+						<h1>Descripción</h1>
+						<p class="justify">
+							Los asientos tienen una función de masaje, con siete motores eléctricos.
+						</p>
+						<p class="justify">
+							<strong>Instrumentación trasera:</strong> velocímetro, termómetro exterior y reloj. Techo de cristal para las plazas traseras. Tiene una membrana de cristal líquido, con polímeros de plástico conductores de la electricidad. Cuando la membrana está excitada (con una tensión de 90 voltios), los polímeros se ordenan de manera que el cristal es transparente. Cuando se interrumpe la corriente eléctrica, el cristal se vuelve translúcido y bloquea la luz. 
+						</p>
+						<p class="justify">
+							Dos teléfonos con conexión <strong>«bluetooth»</strong>, un frigorífico (con un compresor eléctrico), huecos para botellas y copas. Internet vía WAP Acceso al portal de Mercedes Benz sólo en Alemania, Austria y Suiza.Cargador de seis CD, monitor, reproductor de DVD, conexiones para reproductores de MP3 y video.
+						</p>
+						<p class="justify">
+							El escudo, la doble M es semejante al que tenía en el pasado. Anteriormente significaba <strong>«Maybach-Motorenbau»</strong> (fábrica de motores Maybach) y ahora <strong>«Maybach Manufaktur»</strong>.
+						</p>
+					</div>
+				</div>
+				<div class="center">
+					<h3><span class="title2">Galeria de imágenes: <strong>MAYBACH</strong></span></h3>
+					<img src="../images/PopularCarOne/one-01.png" width="477" height="393" id="galeryImage">
+					<p>
+					<button onclick="firstImage();" value="<<-"><img src="../images/buttons/first.png" alt=""></button>
+					<button onclick="previousImage();" value="<<-"><img src="../images/buttons/previous.png" alt=""></button>
+					<button onclick="nextImage();" value="<<-"><img src="../images/buttons/next.png" alt=""></button>
+					<button onclick="lastImage();" value="<<-"><img src="../images/buttons/last.png" alt=""></button>
+					</p>
+				</div>
 				<p>Para mayor información, comuníquese al telefono (999) 2 - 19 - 43 - 79 o mándenos un email a <a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a></p>
 			</div>
 		</div>
