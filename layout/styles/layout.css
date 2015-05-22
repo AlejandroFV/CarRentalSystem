@@ -73,7 +73,6 @@ a {
 	text-decoration: none;
 }
 
-
 .fl_left, .imgl {
 	float: left;
 }
@@ -108,6 +107,28 @@ img {
 
 
 /*Wrappers*/
+
+#menuManager{
+	float:left;
+	width: 940px;
+	height: 100px;
+	margin-left: 100px;
+	text-align: center;
+}
+
+#menuManager div{
+	float:left;
+	width: 220px;
+	margin-right: 15px;
+}
+
+#menuManager ul{
+	list-style:none;
+}
+
+#menuManager ul li{
+	margin-left: -25px;
+}
 
 div.wrapper {
 	display: block;
