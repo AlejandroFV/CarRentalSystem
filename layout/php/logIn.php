@@ -7,6 +7,7 @@
 	$result = mysqli_query($con, $scriptQuery);
 	$values = mysqli_fetch_array($result, MYSQLI_NUM);
 	mysqli_close($con);
+	$rol_user = $values[4];
 	$email_user = $values[3];
 	$password_user = $values[2];
 	$name_user = $values[1];
@@ -14,7 +15,13 @@
 	if ($email == $email_user && $password == $password_user) {
 		echo "Usuario correcto <br>";
 		session_start();
+
+		/*
+		Declaración de las variables de sesión
+		*/
 		$_SESSION['nick_user'] = $name_user;
+		$_SESSION['rol_user'] = $rol_user;
+
 		header("location:../../index.php");
 	}else{
 		echo "<script>

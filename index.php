@@ -17,8 +17,9 @@
 				<ul>
 					<?php
 						if (!empty($_SESSION['nick_user'])){
-							$userName = $_SESSION['nick_user'];
-							echo "<li> Bienvenido: ".$userName."</li>";
+							$name_user = $_SESSION['nick_user'];
+							//$rol_user = $_SESSION['rol_user'];
+							echo "<li> Bienvenido: ".$name_user."</li>";
 							echo "<li class='last'><a href='pages/login.html'>Cerrar sesión</a></li>";
 						}else{
 					?>
@@ -31,6 +32,18 @@
 				</ul>
 				<br class="clear" />
 			</div>
+			<?php
+						if (!empty($_SESSION['nick_user'])){
+							$rol_user = $_SESSION['rol_user'];
+							if ($rol_user == "manager") {
+								echo "<div id='topbar'>
+										<p class='center'><a href='pages/menuManager.html'>Administrar sistema de autos</a></p>
+										<br class='clear' />
+									</div>";
+							}
+						}
+					?>
+			
 		</div>
 
 		<div class="wrapper col2">
