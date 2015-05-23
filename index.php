@@ -20,7 +20,7 @@
 							$name_user = $_SESSION['nick_user'];
 							//$rol_user = $_SESSION['rol_user'];
 							echo "<li> Bienvenido: ".$name_user."</li>";
-							echo "<li class='last'><a href='pages/login.html'>Cerrar sesión</a></li>";
+							echo "<li class='last'><a href='layout/php/closeSession.php'>Cerrar sesión</a></li>";
 						}else{
 					?>
 							<li><a href="pages/login.html">Iniciar Sesión</a></li>
@@ -33,16 +33,16 @@
 				<br class="clear" />
 			</div>
 			<?php
-						if (!empty($_SESSION['nick_user'])){
-							$rol_user = $_SESSION['rol_user'];
-							if ($rol_user == "manager") {
-								echo "<div id='topbar'>
-										<p class='center'><a href='pages/menuManager.html'>Administrar sistema de autos</a></p>
-										<br class='clear' />
-									</div>";
-							}
-						}
-					?>
+				if (!empty($_SESSION['nick_user'])){
+					$rol_user = $_SESSION['rol_user'];
+					if ($rol_user == "manager") {
+						echo "<div id='topbar'>
+								<p class='center'><a href='pages/menuManager.html'>Administrar sistema de autos</a></p>
+								<br class='clear' />
+							</div>";
+					}
+				}
+			?>
 			
 		</div>
 
@@ -59,7 +59,7 @@
 		<div class="wrapper col3">
 			<div id="topnav">
 				<ul>
-					<li class="active"><a href="index.html">Inicio</a><span>Página principal</span></li>
+					<li class="active"><a href="index.php">Inicio</a><span>Página principal</span></li>
 					<li><a href="#">Más populares</a><span>Por rating</span>
 						<ul>
 							<li><a href="pages/popularCarOne.html">Auto 1</a></li>
@@ -69,7 +69,11 @@
 					</li>
 					<li><a href="pages/paymentTypes.html">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
 					<li><a href="pages/about.html">Acerca de nosotros</a><span>Desarrolladores</span></li>
-					<li class="last"><a href="#">Link text</a><span>Test Text Here</span></li>
+					<?php
+						if (!empty($_SESSION['nick_user'])){
+							echo "<li><a href='pages/borrowCar.php'>Reservaciones</a><span>Reserva tu automóvil</span></li>";
+						}
+					?>
 				</ul>
 				<br class="clear" />
 			</div>
