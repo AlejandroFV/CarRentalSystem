@@ -1,5 +1,5 @@
 <?php 
-	$IdCar = $_POST['IdCar'];
+	$matricula = $_POST['matricula'];
 	$dialy_rate = $_POST['dialy_rate'];
 	$hourly_rate = $_POST['hourly_rate'];
 	$color = $_POST['color'];
@@ -7,8 +7,8 @@
 
 	
 	require("connection.php");
-	$scriptInsert = "INSERT INTO crs.car (id_car, daily_rate, hourly_rate, color, id_type) VALUES 
-		('$IdCar', '$dialy_rate', '$hourly_rate', '$color', '$type');";
+	$scriptInsert = "INSERT INTO crs.car (matricula,daily_rate, hourly_rate, color, id_type) VALUES 
+		('$matricula','$dialy_rate', '$hourly_rate', '$color', '$type');";
 	$result = mysqli_query($con, $scriptInsert);
 	mysqli_close($con);
 	//$values = mysqli_fetch_array($result, MYSQLI_NUM);

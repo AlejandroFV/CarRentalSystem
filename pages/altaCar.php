@@ -54,8 +54,8 @@
 					<div id="jo">
 						<form id=altaCar action="../layout/php/altaCarScrip.php" method="post">
 							
-							<label for="IdCar">Id del carro:</label><br>
-							<input type="text" id=IdCar name="IdCar"><br>
+							<label for="matricula">Matricula del carro:</label><br>
+							<input type="text" id=matricula name="matricula"><br>
 
 							<label for="dialy_rate">Dialy rate:</label><br>
 							<input type="text" id="dialy_rate" name="dialy_rate"><br>
