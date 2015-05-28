@@ -21,17 +21,30 @@
 							$name_user = $_SESSION['nick_user'];
 							//$rol_user = $_SESSION['rol_user'];
 							echo "<li> Bienvenido: ".$name_user."</li>";
-							echo "<li class='last'><a href='layout/php/closeSession.php'>Cerrar sesión</a></li>";
+							echo "<li class='last'><a href='../layout/php/closeSession.php'>Cerrar sesión</a></li>";
 						}else{
 					?>
-							<li><a href="pages/login.html">Iniciar Sesión</a></li>
-							<li class="last"><a href="pages/register.html">Registrarse</a></li>
+							<li><a href="login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="register.html">Registrarse</a></li>
 					<?php
 						}
 					?>
+					
 				</ul>
 				<br class="clear" />
 			</div>
+			<?php
+				if (!empty($_SESSION['nick_user'])){
+					$rol_user = $_SESSION['rol_user'];
+					if ($rol_user == "manager") {
+						echo "<div id='topbar'>
+								<p class='center'><a href='menuManager.php'>Administrar sistema de autos</a></p>
+								<br class='clear' />
+							</div>";
+					}
+				}
+			?>
+			
 		</div>
 
 		<div class="wrapper col2">
@@ -57,8 +70,8 @@
 							<label for="matricula">Matricula del carro:</label><br>
 							<input type="text" id=matricula name="matricula"><br>
 
-							<label for="dialy_rate">Dialy rate:</label><br>
-							<input type="text" id="dialy_rate" name="dialy_rate"><br>
+							<label for="daily_rate">Daily rate:</label><br>
+							<input type="text" id="daily_rate" name="daily_rate"><br>
 							
 							<label for="hourly_rate">Hourly rate:</label><br>
 							<input type="text" id="hourly_rate" name="hourly_rate"><br>
@@ -68,7 +81,7 @@
 							
 							<label for="type">Tipo:</label><br>
 							
-							<select id=type name=type>
+							<select id="type" name="type">
 								<?php  
 									$scriptType = "SELECT * FROM cartype";
 									require("../layout/php/connection.php");
@@ -77,7 +90,7 @@
 										// Operaciones con los resultados que tenemos en $fila
 									 	$id_type = $fila[0];
 									 	$model = $fila[1];
-									 	$mensaje = "<option name={$model} value= {$id_type}> {$model} </option>";
+									 	$mensaje = "<option name='$model' value= '$id_type'> $model </option>";
 									 	echo $mensaje;
 									 }
 									 mysqli_close($con);

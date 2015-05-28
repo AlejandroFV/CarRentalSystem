@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,11 +16,35 @@
 			<div id="topbar">
 				<p>Tel: (999)2-19-43-79 | Mail: <a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a></p>
 				<ul>
-					<li><a href="login.html">Iniciar Sesión</a></li>
-					<li class="last"><a href="register.html">Registrarse</a></li>
+					<?php
+						if (!empty($_SESSION['nick_user'])){
+							$name_user = $_SESSION['nick_user'];
+							//$rol_user = $_SESSION['rol_user'];
+							echo "<li> Bienvenido: ".$name_user."</li>";
+							echo "<li class='last'><a href='../layout/php/closeSession.php'>Cerrar sesión</a></li>";
+						}else{
+					?>
+							<li><a href="login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="register.html">Registrarse</a></li>
+					<?php
+						}
+					?>
+					
 				</ul>
 				<br class="clear" />
 			</div>
+			<?php
+				if (!empty($_SESSION['nick_user'])){
+					$rol_user = $_SESSION['rol_user'];
+					if ($rol_user == "manager") {
+						echo "<div id='topbar'>
+								<p class='center'><a href='menuManager.php'>Administrar sistema de autos</a></p>
+								<br class='clear' />
+							</div>";
+					}
+				}
+			?>
+			
 		</div>
 
 		<div class="wrapper col2">

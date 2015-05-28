@@ -37,7 +37,7 @@
 					$rol_user = $_SESSION['rol_user'];
 					if ($rol_user == "manager") {
 						echo "<div id='topbar'>
-								<p class='center'><a href='pages/menuManager.html'>Administrar sistema de autos</a></p>
+								<p class='center'><a href='pages/menuManager.php'>Administrar sistema de autos</a></p>
 								<br class='clear' />
 							</div>";
 					}
@@ -49,7 +49,7 @@
 		<div class="wrapper col2">
 			<div id="header">
 				<div class="fl_left">
-					<h1><a href="index.html">Car Rental System</a></h1>
+					<h1><a href="index.php">Car Rental System</a></h1>
 					<p>¡Los mejores vehículos al mejor precio!</p>
 				</div>
 				<br class="clear" />
@@ -62,13 +62,13 @@
 					<li class="active"><a href="index.php">Inicio</a><span>Página principal</span></li>
 					<li><a href="#">Más populares</a><span>Por rating</span>
 						<ul>
-							<li><a href="pages/popularCarOne.html">Auto 1</a></li>
-							<li><a href="pages/popularCarTwo.html">Auto 2</a></li>
-							<li><a href="pages/popularCarThree.html">Auto 3</a></li>
+							<li><a href="pages/popularCarOne.php">Auto 1</a></li>
+							<li><a href="pages/popularCarTwo.php">Auto 2</a></li>
+							<li><a href="pages/popularCarThree.php">Auto 3</a></li>
 						</ul>
 					</li>
-					<li><a href="pages/paymentTypes.html">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
-					<li><a href="pages/about.html">Acerca de nosotros</a><span>Desarrolladores</span></li>
+					<li><a href="pages/paymentTypes.php">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
+					<li><a href="pages/about.php">Acerca de nosotros</a><span>Desarrolladores</span></li>
 					<?php
 						if (!empty($_SESSION['nick_user'])){
 							echo "<li><a href='pages/borrowCar.php'>Reservaciones</a><span>Reserva tu automóvil</span></li>";
@@ -159,7 +159,7 @@
 		
 		<div class="wrapper col7">
 			<div id="copyright">
-				<p class="fl_left">Copyright &copy; 2015 - Todos los derechos reservados - <a href="index.html">CRS</a></p>
+				<p class="fl_left">Copyright &copy; 2015 - Todos los derechos reservados - <a href="index.php">CRS</a></p>
 				<br class="clear" />
 			</div>
 		</div>
