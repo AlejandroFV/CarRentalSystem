@@ -62,39 +62,36 @@
 				<div id="content">
 					<h2 class="title2">Administra tu negocio</h2>
 					<br class="clear">
-					<h3 class="title4">Administrar Autos</h3>
-					<div id="menuManager">
-						<div>
-							<h3 class="title3"> <a href="altaCar.php">Alta de autos</a></h3>
-						</div>
-						<div>
-							<h3 class="title3"> <a href="bajaCar.php">Baja de autos</a></h3>
-						</div>
-						<div>
-							<h3 class="title3"> <a href="modificarCar.php">Modificar autos </a></h3>
-						</div>
-					</div>
+					<h3 class="title4">Eliminar Local</h3>
+					<h1>¿Está seguro qe desea <strong>eliminar</strong> este local?</h1>
+					<br class="clear">
+					<div id="center">
+						<?php
+							$idLocation = $_GET['ID'];
+							require("../layout/php/connection.php");
+							$scriptSelect = "SELECT * FROM crs.location WHERE id_location = $idLocation";
+							$result = mysqli_query($con, $scriptSelect);
+							$values = mysqli_fetch_row($result);
+							mysqli_close($con);
+						?>
+						<form id=altaCar action="../layout/php/bajaLocationScript.php" method="post">
+							
+							<input type="hidden" id="id_location" name ="id_location" value = '<?php echo $values[0] ?>' ><br>
 
-					<h3 class="title4">Administrar Locales</h3>
-					<div id="menuManager">
-						<div>
-							<h3 class="title3"><a href="altaLocation.php">Alta de local</a></h3>
-							<ul>
-							</ul>
-						</div>
-						<div>
-							<h3 class="title3"><a href="bajaLocation.php">Baja de local</a></h3>
-							<ul>
-							</ul>
-						</div>
-						<div>
-						<h3 class="title3"> <a href="modificarLocation.php">Modificar local</a></h3>
-							<ul>
-							</ul>
-						</div>
+							<label for="name_location">Nombre del local (Dirección):</label><br>
+							<input type="text" id="name_location" name="name_location" size="50" disabled="true" value = '<?php echo $values[1] ?>'><br>
+							
+							<label for="capacity_location">Capacidad del local:</label><br>
+							<input type="text" id="capacity_location" name="ccapacity_location" size="1" disabled="true" value = '<?php echo $values[2] ?>' ><br>
+							
+							<br><br>
+							<input type="submit" value="Dar de baja" name="bajaConfirm" id="bajaConfirm">
+						</form>					
 					</div>
+					<br class="clear">
 				</div>
 				<br class="clear" />
+				<a href="menuManager.php">Regresar al menu.</a>
 			</div>
 		</div>
 

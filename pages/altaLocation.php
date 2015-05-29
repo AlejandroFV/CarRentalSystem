@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Iniciar sesión</title>
+		<title>Alta de Locales</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 		<script src="../layout/scripts/default.js"></script>
@@ -62,39 +62,27 @@
 				<div id="content">
 					<h2 class="title2">Administra tu negocio</h2>
 					<br class="clear">
-					<h3 class="title4">Administrar Autos</h3>
-					<div id="menuManager">
-						<div>
-							<h3 class="title3"> <a href="altaCar.php">Alta de autos</a></h3>
-						</div>
-						<div>
-							<h3 class="title3"> <a href="bajaCar.php">Baja de autos</a></h3>
-						</div>
-						<div>
-							<h3 class="title3"> <a href="modificarCar.php">Modificar autos </a></h3>
-						</div>
-					</div>
+					<h3 class="title4">Agregar Local</h3>
+					<br class="clear">
+					<div id="jo">
+						<form id=altaCar action="../layout/php/altaLocationScript.php" method="post">
+							
+							<label for="name_location">Nombre del local (Dirección):</label><br>
+							<input type="text" id="name_location" name="name_location"><br>
+							
+							<label for="capacity_location">Capacidad del local:</label><br>
+							<input type="text" id="capacity_location" name="capacity_location"><br>
 
-					<h3 class="title4">Administrar Locales</h3>
-					<div id="menuManager">
-						<div>
-							<h3 class="title3"><a href="altaLocation.php">Alta de local</a></h3>
-							<ul>
-							</ul>
-						</div>
-						<div>
-							<h3 class="title3"><a href="bajaLocation.php">Baja de local</a></h3>
-							<ul>
-							</ul>
-						</div>
-						<div>
-						<h3 class="title3"> <a href="modificarLocation.php">Modificar local</a></h3>
-							<ul>
-							</ul>
-						</div>
+							<br class="clear">
+							<br class="clear">
+							<input type=reset value=limpiar> 
+							<input type=submit value=registrar>
+						</form>				
 					</div>
+					<br class="clear">
 				</div>
 				<br class="clear" />
+				<a href="menuManager.php">Regresar al menu.</a>
 			</div>
 		</div>
 
