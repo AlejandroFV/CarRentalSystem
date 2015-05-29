@@ -62,39 +62,35 @@
 				<div id="content">
 					<h2 class="title2">Administra tu negocio</h2>
 					<br class="clear">
-					<h3 class="title4">Administrar Autos</h3>
-					<div id="menuManager">
-						<div>
-							<h3 class="title3"> <a href="altaCar.php">Alta de autos</a></h3>
-						</div>
-						<div>
-							<h3 class="title3"> <a href="bajaCar.php">Baja de autos</a></h3>
-						</div>
-						<div>
-							<h3 class="title3"> <a href="modificarCar.php">Modificar autos </a></h3>
-						</div>
+					<h3 class="title4">Modificar Local</h3>
+					<br class="clear">
+					<div id="center">
+						<table>
+							<thead>
+								<th>Nombre del local (Dirección)</th>
+								<th>Capacidad del local</th>
+								<th>Dar de baja al local</th>
+							</thead>
+							<tbody>
+								<?php
+									require("../layout/php/connection.php");
+									$scriptSelect = "SELECT * FROM crs.location";
+									$result = mysqli_query($con, $scriptSelect);
+									while ($values = mysqli_fetch_array($result)) {
+										echo "<tr class='dark'>
+											<td>$values[1]</td>
+											<td class='center'>$values[2]</td>
+											<td><a href='confirmModificarLocation.php?ID= $values[0]'>Modificar este local</a></td>
+										</tr>";
+									}
+								?>
+							</tbody>
+						</table>			
 					</div>
-
-					<h3 class="title4">Administrar Locales</h3>
-					<div id="menuManager">
-						<div>
-							<h3 class="title3"><a href="altaLocation.php">Alta de local</a></h3>
-							<ul>
-							</ul>
-						</div>
-						<div>
-							<h3 class="title3"><a href="bajaLocation.php">Baja de local</a></h3>
-							<ul>
-							</ul>
-						</div>
-						<div>
-						<h3 class="title3"> <a href="modificarLocation.php">Modificar local</a></h3>
-							<ul>
-							</ul>
-						</div>
-					</div>
+					<br class="clear">	
 				</div>
 				<br class="clear" />
+				<a href="menuManager.php">Regresar al menu.</a>
 			</div>
 		</div>
 
