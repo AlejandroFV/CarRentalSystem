@@ -83,16 +83,16 @@
 								$queryInformationCar = "SELECT * FROM car NATURAL JOIN cartype NATURAL JOIN locationcar NATURAL JOIN location 
 									WHERE matricula = $matricula";
 								$result = mysqli_query($con, $queryInformationCar);
-								$valores = mysqli_fetch_row($result);
+								$values = mysqli_fetch_row($result);
 
-								$dailyRate = $valores[3];
-								$hourlyRate = $valores[4];
+								$dailyRate = $values[3];
+								$hourlyRate = $values[4];
 								echo "<tr class='dark'>";
-								echo "<td>$valores[3]</td>";
-								echo "<td>$valores[4]</td>";
-								echo "<td>$valores[5]</td>";
-								echo "<td>$valores[6]</td>";
-								echo "<td>$valores[7]</td>";
+								echo "<td>$values[3]</td>";
+								echo "<td>$values[4]</td>";
+								echo "<td>$values[5]</td>";
+								echo "<td>$values[6]</td>";
+								echo "<td>$values[7]</td>";
 								echo "<td>
 									      <select name='typePayment' id='typePayment'>
 										      <option value='Visa'>Visa</option>
