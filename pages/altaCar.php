@@ -96,6 +96,24 @@
 									 mysqli_close($con);
 
 								?>
+							</select><br><br>
+							
+							<label for="type">Local en donde estará alojadoel automóvil:</label><br>
+							<select id="type" name="location">
+								<?php  
+									$scriptType = "SELECT * FROM location";
+									require("../layout/php/connection.php");
+									$resultType = mysqli_query($con, $scriptType);
+									while ($fila = mysqli_fetch_array($resultType,MYSQLI_NUM)){
+										// Operaciones con los resultados que tenemos en $fila
+									 	$id_type = $fila[0];
+									 	$location = $fila[1];
+									 	$mensaje = "<option name='$location' value= '$id_type'> $location </option>";
+									 	echo $mensaje;
+									 }
+									 mysqli_close($con);
+
+								?>
 							</select>
 							<br class="clear">
 							<br class="clear">
