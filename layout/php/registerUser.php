@@ -26,6 +26,7 @@
 				alert('La cuenta ha sido creada exitosamente.');
 				window.location.href='../../pages/register.html';
 			</script>";
+		require("welcomeMailer.php");
 	}else{
 		echo "<script>
 				alert('Ya existe una cuenta asociada al correo que ingreso.');
