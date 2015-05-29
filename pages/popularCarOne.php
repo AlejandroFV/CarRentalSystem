@@ -60,8 +60,8 @@
 		<div class="wrapper col3">
 			<div id="topnav">
 				<ul>
-					<li class="active"><a href="../index.php">Inicio</a><span>Página principal</span></li>
-					<li><a href="#">Más populares</a><span>Por rating</span>
+					<li><a href="../index.php">Inicio</a><span>Página principal</span></li>
+					<li class="active"><a href="#">Más populares</a><span>Por rating</span>
 						<ul>
 							<li><a href="popularCarOne.php">Auto 1</a></li>
 							<li><a href="popularCarTwo.php">Auto 2</a></li>

@@ -59,7 +59,7 @@
 		<div class="wrapper col3">
 			<div id="topnav">
 				<ul>
-					<li class="active"><a href="../index.php">Inicio</a><span>Página principal</span></li>
+					<li><a href="../index.php">Inicio</a><span>Página principal</span></li>
 					<li><a href="#">Más populares</a><span>Por rating</span>
 						<ul>
 							<li><a href="popularCarOne.php">Auto 1</a></li>
@@ -68,7 +68,7 @@
 						</ul>
 					</li>
 					<li><a href="paymentTypes.php">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
-					<li><a href="about.php">Acerca de nosotros</a><span>Desarrolladores</span></li>
+					<li class="active"><a href="about.php">Acerca de nosotros</a><span>Desarrolladores</span></li>
 					<?php
 						if (!empty($_SESSION['nick_user'])){
 							echo "<li><a href='borrowCar.php'>Reservaciones</a><span>Reserva tu automóvil</span></li>";
