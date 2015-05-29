@@ -4,12 +4,16 @@
 	$hourly_rate = $_POST['hourly_rate'];
 	$color = $_POST['color'];
 	$type = $_POST['type'];
+	$idLocation = $_POST['location'];
 
 	
 	require("connection.php");
-	$scriptInsert = "INSERT INTO crs.car (matricula,daily_rate, hourly_rate, color, id_type) VALUES 
+	$scriptInsertCar = "INSERT INTO crs.car (matricula,daily_rate, hourly_rate, color, id_type) VALUES 
 		('$matricula', $daily_rate, $hourly_rate, '$color', $type)";
-	$result = mysqli_query($con, $scriptInsert);
+	$scriptInsertLocationCar = "INSERT INTO crs.locationcar (id_location, matricula) VALUES 
+		('$idLocation', '$matricula')";
+	$result = mysqli_query($con, $scriptInsertCar);
+	$result = mysqli_query($con, $scriptInsertLocationCar);
 	mysqli_close($con);
 	//$values = mysqli_fetch_array($result, MYSQLI_NUM);
 	$alert="<script>
