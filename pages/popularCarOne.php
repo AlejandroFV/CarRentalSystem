@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,11 +16,35 @@
 			<div id="topbar">
 				<p>Tel: (999)2-19-43-79 | Mail: <a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a></p>
 				<ul>
-					<li><a href="login.html">Iniciar Sesión</a></li>
-					<li class="last"><a href="register.html">Registrarse</a></li>
+					<?php
+						if (!empty($_SESSION['nick_user'])){
+							$name_user = $_SESSION['nick_user'];
+							//$rol_user = $_SESSION['rol_user'];
+							echo "<li> Bienvenido: ".$name_user."</li>";
+							echo "<li class='last'><a href='../layout/php/closeSession.php'>Cerrar sesión</a></li>";
+						}else{
+					?>
+							<li><a href="login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="register.html">Registrarse</a></li>
+					<?php
+						}
+					?>
+					
 				</ul>
 				<br class="clear" />
 			</div>
+			<?php
+				if (!empty($_SESSION['nick_user'])){
+					$rol_user = $_SESSION['rol_user'];
+					if ($rol_user == "manager") {
+						echo "<div id='topbar'>
+								<p class='center'><a href='menuManager.php'>Administrar sistema de autos</a></p>
+								<br class='clear' />
+							</div>";
+					}
+				}
+			?>
+			
 		</div>
 		
 		<div class="wrapper col2">
@@ -32,17 +60,21 @@
 		<div class="wrapper col3">
 			<div id="topnav">
 				<ul>
-					<li><a href="../index.php">Inicio</a><span>Página principal</span></li>
+					<li class="active"><a href="../index.php">Inicio</a><span>Página principal</span></li>
 					<li><a href="#">Más populares</a><span>Por rating</span>
 						<ul>
-							<li><a href="popularCarOne.html">Auto 1</a></li>
-							<li><a href="popularCarTwo.html">Auto 2</a></li>
-							<li><a href="popularCarThree.html">Auto 3</a></li>
+							<li><a href="popularCarOne.php">Auto 1</a></li>
+							<li><a href="popularCarTwo.php">Auto 2</a></li>
+							<li><a href="popularCarThree.php">Auto 3</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="paymentTypes.html">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
-					<li><a href="about.html">Acerca de nosotros</a><span>Desarrolladores</span></li>
-					<li class="last"><a href="#">Link text</a><span>Test Text Here</span></li>
+					<li><a href="paymentTypes.php">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
+					<li><a href="about.php">Acerca de nosotros</a><span>Desarrolladores</span></li>
+					<?php
+						if (!empty($_SESSION['nick_user'])){
+							echo "<li><a href='borrowCar.php'>Reservaciones</a><span>Reserva tu automóvil</span></li>";
+						}
+					?>
 				</ul>
 				<br class="clear" />
 			</div>

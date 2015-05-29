@@ -16,11 +16,35 @@
 			<div id="topbar">
 				<p>Tel: (999)2-19-43-79 | Mail: <a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a></p>
 				<ul>
-					<li><a href="login.html">Iniciar Sesión</a></li>
-					<li class="last"><a href="register.html">Registrarse</a></li>
+					<?php
+						if (!empty($_SESSION['nick_user'])){
+							$name_user = $_SESSION['nick_user'];
+							//$rol_user = $_SESSION['rol_user'];
+							echo "<li> Bienvenido: ".$name_user."</li>";
+							echo "<li class='last'><a href='../layout/php/closeSession.php'>Cerrar sesión</a></li>";
+						}else{
+					?>
+							<li><a href="login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="register.html">Registrarse</a></li>
+					<?php
+						}
+					?>
+					
 				</ul>
 				<br class="clear" />
 			</div>
+			<?php
+				if (!empty($_SESSION['nick_user'])){
+					$rol_user = $_SESSION['rol_user'];
+					if ($rol_user == "manager") {
+						echo "<div id='topbar'>
+								<p class='center'><a href='menuManager.php'>Administrar sistema de autos</a></p>
+								<br class='clear' />
+							</div>";
+					}
+				}
+			?>
+			
 		</div>
 
 		<div class="wrapper col2">
@@ -54,14 +78,36 @@
 						<!--Cuerpo de la tabla-->
 						<tbody>
 							<?php
-								$idCar = $_GET['ID'];
+								$matricula = $_GET['ID'];
 								require("../layout/php/connection.php");
 								$queryInformationCar = "SELECT * FROM car NATURAL JOIN cartype NATURAL JOIN locationcar NATURAL JOIN location 
-									WHERE id_car = $idCar";
+									WHERE matricula = $matricula";
 								$result = mysqli_query($con, $queryInformationCar);
+								$valores = mysqli_fetch_row($result);
+
+								$dailyRate = $valores[3];
+								$hourlyRate = $valores[4];
+								echo "<tr class='dark'>";
+								echo "<td>$valores[3]</td>";
+								echo "<td>$valores[4]</td>";
+								echo "<td>$valores[5]</td>";
+								echo "<td>$valores[6]</td>";
+								echo "<td>$valores[7]</td>";
+								echo "<td>
+									      <select name='typePayment' id='typePayment'>
+										      <option value='Visa'>Visa</option>
+											  <option value='Visa Debit'>Visa Debit</option>
+											  <option value='Visa Electron'>Visa Electron</option>
+											  <option value='Mastercard'>Mastercard</option>
+											  <option value='American Express'>American Express</option>
+										  </select>
+									  </td>";
+								echo "</tr>";
+								echo "<h3>Usted pagara un total de <strong>$dailyRate</strong> por la tarifa diaria o un total de <strong>$hourlyRate</strong> por la tarida por hora</h3>";
+								/*
 								while ($values = mysqli_fetch_array($result)) {
-									$tarifaPorDia = $values[3];
-									$tarifaPorHora = $values[4];
+									$dailyRate = $values[3];
+									$hourlyRate = $values[4];
 									echo "<tr class='dark'>";
 									echo "<td>$values[3]</td>";
 									echo "<td>$values[4]</td>";
@@ -79,7 +125,8 @@
 										  </td>";
 									echo "</tr>";
 								}
-								echo "<h3>Usted pagara un total de <strong>$tarifaPorDia</strong> por la tarifa diaria o un total de <strong>$tarifaPorHora</strong> por la tarida por hora</h3>";
+								echo "<h3>Usted pagara un total de <strong>$dailyRate</strong> por la tarifa diaria o un total de <strong>$hourlyRate</strong> por la tarida por hora</h3>";
+								*/
 							?>
 
 						</tbody>
