@@ -141,6 +141,8 @@
 			</div>
 		</div>
 
+		<?php require '..\layout\php\subscriptionFromPages.php'; ?>
+
 		<div class="wrapper col7">
 			<div id="copyright">
 				<p class="fl_left">Copyright &copy; 2015 - Todos los derechos reservados - <a href="../index.php">CRS</a></p>
