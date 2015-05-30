@@ -59,7 +59,7 @@
 		<div class="wrapper col3">
 			<div id="topnav">
 				<ul>
-					<li class="active"><a href="../index.php">Inicio</a><span>Página principal</span></li>
+					<li><a href="../index.php">Inicio</a><span>Página principal</span></li>
 					<li><a href="#">Más populares</a><span>Por rating</span>
 						<ul>
 							<li><a href="popularCarOne.php">Auto 1</a></li>
@@ -68,7 +68,7 @@
 						</ul>
 					</li>
 					<li><a href="paymentTypes.php">Tipos de pago</a><span>Formas de pago aceptadas</span></li>
-					<li><a href="about.php">Acerca de nosotros</a><span>Desarrolladores</span></li>
+					<li class="active"><a href="about.php">Acerca de nosotros</a><span>Desarrolladores</span></li>
 					<?php
 						if (!empty($_SESSION['nick_user'])){
 							echo "<li><a href='borrowCar.php'>Reservaciones</a><span>Reserva tu automóvil</span></li>";
@@ -101,32 +101,7 @@
 			</div>
 		</div>
 		
-		<div class="wrapper col6">
-			<div id="footer">
-				<div id="newsletter">
-					<h2>¡Mantente informado de nuestras novedades!</h2>
-					<p>Ingresa tu email para recibir noticias de promociones, nuevos vehículos, etc.</p>
-					<form action="#" method="post">
-					<fieldset>
-						<legend>Novedades</legend>
-						<input type="text" value="Escribe tu Email&hellip;"	size="100" onfocus="this.value=(this.value=='Escribe tu Email&hellip;')? '' : this.value ;" />
-						<input type="submit" name="news_go" id="news_go" value="Enviar" />
-					</fieldset>
-					</form>
-					<p>Para cancelar suscripción <a href="#">haz clic aquí &raquo;</a></p>
-				</div>
-				<div class="footbox">
-					<h2>Nuestros Integrantes</h2>
-					<ul>
-						<li><a href="https://github.com/AlejandroFV">Alejandro Flores Villegas</a></li>
-						<li><a href="https://github.com/BuiRai">Crhistian Uc Vázquez</a></li>
-						<li><a href="https://github.com/IzanamiAlex">Izanami Chin Parra</a></li>
-						<li class="last"><a href="https://github.com/YordiSel">Yordi Sel Rodriguez</a></li>
-					</ul>
-				</div>
-				<br class="clear" />
-			</div>
-		</div>
+		<?php require '..\layout\php\subscriptionFromPages.php'; ?>
 		
 		<div class="wrapper col7">
 			<div id="copyright">

@@ -131,6 +131,16 @@ CREATE INDEX `id_location_idx` ON `CRS`.`locationCar` (`id_location` ASC);
 CREATE INDEX `matricula_idx` ON `CRS`.`locationCar` (`matricula` ASC);
 
 
+-- -----------------------------------------------------
+-- Table `CRS`.`emails`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `CRS`.`emails` (
+  `id_email` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(80) NOT NULL,
+  PRIMARY KEY (`id_email`))
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

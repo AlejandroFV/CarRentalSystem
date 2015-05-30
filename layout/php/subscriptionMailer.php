@@ -13,21 +13,20 @@
 	$mail->Port = 587;
 
 	$mail->From = 'AlejandroFV@mail.com';
-	$mail->FromName = 'CRS Webmaster';
+	$mail->FromName = 'Car Rental System';
 	$mail->addAddress($email);
 
 	$mail->isHTML(true);
 
-	$mail->Subject = 'Bienvenido a Car Rental System';
-	$mail->Body    = '<h2>&iexclHola ' . $name . '!</h2>
-						Aqu&iacute encontrar&aacutes los mejores veh&iacuteculos para alquiler con <b>los mejores precios</b> existentes.<br>
-						Al ser un usuario registrado. Tendr&aacutes acceso a <u>las mejores promociones</u>, 
-						exclusivamente para miembros premium.<br>
+	$mail->Subject = 'Car Rental System - Las mejores promociones';
+	$mail->Body    = 'Ahora est&aacutes inscrito en nuestro bolet&iacuten de novedades.<br>
+						Al estar suscrito a este bolet&iacuten, podr&aacutes mantenerte enterado de todas las novedades, promociones, 
+						vehículos nuevos y mucho m&aacutes.<br>
 						Si tienes alguna duda o comentario, por favor cont&aacutectanos enviando un mensaje a:<br>
 						<a href="mailto:AlejandroFV@mail.com">AlejandroFV@mail.com</a><br>
 						O por medio de nuestro sitio web.<br>
 						&iexclSaludos!';
-	$mail->AltBody = 'Aquí encontrarás los mejores vehículos para alquiler con los mejores precios existentes. '
+	$mail->AltBody = 'Ahora estás inscrito a nuestro boletín de novedades '
 						. 'Si tienes alguna duda o comentario, por favor contáctanos enviando un mensaje a: '
 						. 'AlejandroFV@mail.com '
 						. 'O por medio de nuestro sitio web.';
