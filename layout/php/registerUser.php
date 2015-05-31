@@ -3,7 +3,7 @@
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$password = md5($password);
+	$password = convert_uuencode($password);
 	$emailExistente = false;
 
 	require("connection.php");
