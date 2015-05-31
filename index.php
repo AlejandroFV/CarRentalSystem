@@ -118,11 +118,16 @@
 								<p>Repositorio del proyecto CRS.</p>
 								<p class="readmore"><a href="https://github.com/AlejandroFV/CarRentalSystem">Ver más &raquo;</a></p>
 							</li>
-							<!-- <li class="last"><img class="imgl" src="images/80x80.gif" alt="" />
-								<p><strong>Indonectetus facilis leo nibh.</strong></p>
-								<p>Nullamlacus dui ipsum cons eque loborttis non euis que morbi penas dapibulum orna.</p>
-								<p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-							</li> -->
+							<li><img class="imgl" src="images/phpmailer_mini.png" height="80" width="80" alt="" />
+								<p><strong>PHPMailer</strong></p>
+								<p>The classic email sending library for PHP.</p>
+								<p class="readmore"><a href="https://github.com/PHPMailer/PHPMailer">Ver más &raquo;</a></p>
+							</li>
+							<li class="last"><img class="imgl" src="images/bacon-ipsum.png" height="80" width="80" alt="" />
+								<p><strong>Bacon Ipsum</strong></p>
+								<p>A Meatier Lorem Ipsum Generator.</p>
+								<p class="readmore"><a href="http://baconipsum.com/">Ver más &raquo;</a></p>
+							</li>
 						</ul>
 					</div>
 				</div>
