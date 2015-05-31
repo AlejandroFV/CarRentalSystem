@@ -143,7 +143,7 @@
 							$typePayment = $_POST['typePayment'];
 							
 							$queryInvoice = "INSERT INTO crs.invoice (date_invoice, type_payment, aval_invoice, total_cost) 
-								VALUES ('$hoy','$typePayment','$nameUser',$tarifaPorDia)";
+								VALUES ('$hoy','$typePayment','$nameUser',$dailyRate)";
 							require("../layout/php/connection.php");
 							mysqli_query($con, $queryInvoice);
 							echo "<script>alert('Has reservado un auto');</script>";

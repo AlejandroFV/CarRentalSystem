@@ -20,11 +20,11 @@
 							$name_user = $_SESSION['nick_user'];
 							//$rol_user = $_SESSION['rol_user'];
 							echo "<li> Bienvenido: ".$name_user."</li>";
-							echo "<li class='last'><a href='layout/php/closeSession.php'>Cerrar sesión</a></li>";
+							echo "<li class='last'><a href='../layout/php/closeSession.php'>Cerrar sesión</a></li>";
 						}else{
 					?>
-							<li><a href="pages/login.html">Iniciar Sesión</a></li>
-							<li class="last"><a href="pages/register.html">Registrarse</a></li>
+							<li><a href="login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="register.html">Registrarse</a></li>
 					<?php
 						}
 					?>
@@ -37,7 +37,7 @@
 					$rol_user = $_SESSION['rol_user'];
 					if ($rol_user == "manager") {
 						echo "<div id='topbar'>
-								<p class='center'><a href='pages/menuManager.php'>Administrar sistema de autos</a></p>
+								<p class='center'><a href='menuManager.php'>Administrar sistema de autos</a></p>
 								<br class='clear' />
 							</div>";
 					}
