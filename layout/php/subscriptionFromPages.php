@@ -10,7 +10,7 @@
 							<input type="submit" name="news_go" id="news_go" value="Enviar" />
 						</fieldset>
 					</form>
-					<p>Para cancelar suscripción <a href="#">haz clic aquí &raquo;</a></p>
+					<!-- <p>Para cancelar suscripción <a href="#">haz clic aquí &raquo;</a></p> -->
 				</div>
 				<div class="footbox">
 					<h2>Nuestros Integrantes</h2>
