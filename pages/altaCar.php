@@ -124,7 +124,7 @@
 					<br class="clear">
 				</div>
 				<br class="clear" />
-				<a href="menuManager.html">Regresar al menu.</a>
+				<a href="menuManager.php">Regresar al menu.</a>
 			</div>
 		</div>
 

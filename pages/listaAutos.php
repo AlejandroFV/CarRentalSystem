@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Baja de Automoviles</title>
+		<title>Lista de Automoviles</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 		<script src="../layout/scripts/default.js"></script>
@@ -49,17 +49,42 @@
 				<div id="content">
 					<h2 class="title2">Administra tu negocio</h2>
 					<br class="clear">
-					<h3 class="title4">Eliminar Autos</h3>
+					<h3 class="title4">Lista de Autos registrados.</h3>
 					<br class="clear">
 					<div id="jojo">
-						<form id=bajaCar method="post" action="bajaCar2.php">
-							<label for="matricula">Matricula del carro:</label><br>
-							<input type="text" id=matricula name="matricula"><br>
-
-							<br class="clear">
-							<br class="clear">
-							<input type=submit value=Buscar>
-						</form>				
+						<table>
+							<thead>
+								<td>Matricula</td>
+								<td>Color</td>
+								<td>Modelo</td>
+								<td>Renta por dia.</td>
+								<td>Renta por hora</td>
+								
+							</thead>
+							<tbody>
+								<?php 
+									$script = "SELECT * FROM car NATURAL JOIN cartype ORDER BY matricula;";
+									require ("../layout/php/connection.php");
+									$result = mysqli_query($con, $script);
+									while ( $values = mysqli_fetch_array($result,MYSQLI_NUM)) {
+										$matricula = $values[1];
+										$dialy_rate = $values[2];
+										$hourly_rate = $values[3];
+										$color = $values[4];
+										$idType = $values[0];
+										$model = $values[5];
+										echo "<tr>";
+										echo "	<td>$matricula</td>";
+										echo "	<td>$color</td>";
+										echo "	<td>$model</td>";
+										echo "	<td>$dialy_rate</td>";
+										echo "	<td>$hourly_rate</td>";
+										echo "<tr>";
+									}
+									
+								 ?>
+							</tbody>
+						</table>				
 					</div>
 					<br class="clear">
 				</div>

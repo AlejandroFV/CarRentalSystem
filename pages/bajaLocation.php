@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Iniciar sesión</title>
+		<title>Baja de local</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 		<script src="../layout/scripts/default.js"></script>

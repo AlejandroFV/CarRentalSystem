@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Iniciar sesión</title>
+		<title>Modificar informacion de automoviles</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 		<script src="../layout/scripts/default.js"></script>
@@ -21,30 +21,17 @@
 							$name_user = $_SESSION['nick_user'];
 							//$rol_user = $_SESSION['rol_user'];
 							echo "<li> Bienvenido: ".$name_user."</li>";
-							echo "<li class='last'><a href='../layout/php/closeSession.php'>Cerrar sesión</a></li>";
+							echo "<li class='last'><a href='layout/php/closeSession.php'>Cerrar sesión</a></li>";
 						}else{
 					?>
-							<li><a href="login.html">Iniciar Sesión</a></li>
-							<li class="last"><a href="register.html">Registrarse</a></li>
+							<li><a href="pages/login.html">Iniciar Sesión</a></li>
+							<li class="last"><a href="pages/register.html">Registrarse</a></li>
 					<?php
 						}
 					?>
-					
 				</ul>
 				<br class="clear" />
 			</div>
-			<?php
-				if (!empty($_SESSION['nick_user'])){
-					$rol_user = $_SESSION['rol_user'];
-					if ($rol_user == "manager") {
-						echo "<div id='topbar'>
-								<p class='center'><a href='menuManager.php'>Administrar sistema de autos</a></p>
-								<br class='clear' />
-							</div>";
-					}
-				}
-			?>
-			
 		</div>
 
 		<div class="wrapper col2">
@@ -64,33 +51,24 @@
 					<br class="clear">
 					<h3 class="title4">Modificar Autos</h3>
 					<br class="clear">
-					<div id="menuManager">
-						<form id=altaCar method="post">
-							Id del carro.
-							<input type="text">
-							<br class="clear">
-							dialy rate.
-							<input type="text">
-							<br class="clear">
-							hourly rate.
-							<input type="text">
-							<br class="clear">
-							color
-							<input type="text">
-							<br class="clear">
-							tipo
-							<input type="text">
+					<div id="jojo">
+						<?php 
+							
+						 ?>
+						<form id=modificarCar method="post" action=modificarCar2.php>
+							<label for="matricula">Matricula del carro:</label><br>
+							<input type="text" id=matricula name="matricula"><br>
+						
 							<br class="clear">
 							<br class="clear">
-							<input type=button value=buscar>
-							<input type="reset" value=limpiar> 
-							<input type=button value=registrar>
+
+							<input type=submit value=buscar>
 						</form>				
 					</div>
 					<br class="clear">	
 				</div>
 				<br class="clear" />
-				<a href="menuManager.html">Regresar al menu.</a>
+				<a href="menuManager.php">Regresar al menu.</a>
 			</div>
 		</div>
 
