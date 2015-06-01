@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Iniciar sesión</title>
+		<title>Administrar Negocio</title>
 		<meta charset='UTF-8' />
 		<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 		<script src="../layout/scripts/default.js"></script>
@@ -72,6 +72,9 @@
 						</div>
 						<div>
 							<h3 class="title3"> <a href="modificarCar.php">Modificar autos </a></h3>
+						</div>
+						<div>
+							<h3 class="title3"> <a href="listaAutos.php">Lista de Automoviles.</a></h3>
 						</div>
 					</div>
 

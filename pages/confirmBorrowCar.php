@@ -165,7 +165,7 @@
 						<h2><span>¿Por qué reservar automóviles en nuestro negocio?</span></h2>
 						<ul>
 							<li><strong>Autos muy económicos:</strong>
-								Los automóviles que prestamos a los clientes es especialmente para que ellos utilicen, siempre y cuando le den un buen uso. Mientras más sean las personas que soliciten nuestro servicio más mantenimiento le daremos a los automóviles y por lo tanto nuestros precios bajaran y se harán accesibles a mas usuarios. br.clear
+								Los automóviles que prestamos a los clientes es especialmente para que ellos utilicen, siempre y cuando le den un buen uso. Mientras más sean las personas que soliciten nuestro servicio más mantenimiento le daremos a los automóviles y por lo tanto nuestros precios bajaran y se harán accesibles a mas usuarios.
 							</li>
 							<br class="clear">
 							<li><strong>Diversificación de autos:</strong>

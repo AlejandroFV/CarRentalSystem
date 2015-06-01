@@ -1,11 +1,7 @@
 
 /*Usuarios*/
 INSERT INTO crs.user (id_user, name_user, pass_user, email_user, rol_user) VALUES 
-	('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@hotmail.com', 'manager'), /*Contraseña = admin*/
-	('2', 'hector', '81dc9bdb52d04dc20036dbd8313ed055', 'hector@hotmail.com', 'customer'), /*Contraseña = 1234*/
-	('3', 'mario', '81dc9bdb52d04dc20036dbd8313ed055', 'mario@hotmail.com', 'customer'), /*Contraseña = 1234*/
-	('4', 'arvizu', '81dc9bdb52d04dc20036dbd8313ed055', 'arvizu@hotmail.com', 'customer'), /*Contraseña = 1234*/
-	('5', 'olivas', '81dc9bdb52d04dc20036dbd8313ed055', 'olivas@hotmail.com', 'customer'); /*Contraseña = 1234*/
+	(1, 'Alejandro Flores Villegas', '(5$%/1#(P,#0`\n`\n', 'AlejandroFV@mail.com', 'manager');
 
 /*Tipos de autos*/
 INSERT INTO crs.cartype (id_type, model_car) VALUES 

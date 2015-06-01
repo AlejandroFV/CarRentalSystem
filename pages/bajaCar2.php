@@ -52,13 +52,57 @@
 					<h3 class="title4">Eliminar Autos</h3>
 					<br class="clear">
 					<div id="jojo">
-						<form id=bajaCar method="post" action="bajaCar2.php">
-							<label for="matricula">Matricula del carro:</label><br>
-							<input type="text" id=matricula name="matricula"><br>
+						<?php 
+							$dialy_rate = $hourly_rate = $color = $type = "";
 
+
+							if($matricula = $_POST['matricula']){
+								$script = "SELECT * FROM car NATURAL JOIN cartype WHERE matricula=$matricula;";
+								require ("../layout/php/connection.php");
+								$result = mysqli_query($con, $script);
+								$values = mysqli_fetch_array($result,MYSQLI_NUM);
+								$dialy_rate = $values[2];
+								$hourly_rate = $values[3];
+								$color = $values[4];
+								$idType = $values[0];
+								$model = $values[5];
+							}
+
+						 ?>
+						<form id=bajaCar method="post" action="../layout/php/bajaCarScrip.php">
+							<label for="matricula">Matricula del carro:</label><br>
+							<?php 
+								echo "<input type=text id=matricula name=matricula value=$matricula><br>";
+							 ?>
+							
+						
+							<label for="dialy_rate">Dialy rate:</label><br>
+							<?php 
+								echo "<input type=text id=dialy_rate name=dialy_rate value=$dialy_rate><br>";
+							 ?>
+							
+							
+							<label for="hourly_rate">Hourly rate:</label><br>
+							<?php 
+								echo "<input type=text id=hourly_rate name=hourly_rate  value=$hourly_rate><br>";
+							 ?>
+							
+							
+							<label for="color">Color:</label><br>
+							<?php 
+								echo "<input type=text id=color name=color value=$color><br>";
+							 ?>
+							
+							
+							<label for="type">Tipo:</label><br>
+							<?php 
+								echo "<input type=text id=model name=model value=$model>";
+								echo "<input type=hidden id=id_type name=id_type value=$idType>";
+							 ?>
 							<br class="clear">
 							<br class="clear">
-							<input type=submit value=Buscar>
+							
+							<input type=submit value=Eliminar>
 						</form>				
 					</div>
 					<br class="clear">
