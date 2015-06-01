@@ -103,7 +103,7 @@
 										  </select>
 									  </td>";
 								echo "</tr>";
-								echo "<h3>Usted pagara un total de <strong>$dailyRate</strong> por la tarifa diaria o un total de <strong>$hourlyRate</strong> por la tarida por hora</h3>";
+								echo "<h3>Usted pagara un total de $<strong>$dailyRate</strong> por la tarifa diaria o un total de $<strong>$hourlyRate</strong> por la tarifa por hora</h3>";
 								/*
 								while ($values = mysqli_fetch_array($result)) {
 									$dailyRate = $values[3];

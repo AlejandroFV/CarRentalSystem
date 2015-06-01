@@ -6,11 +6,11 @@
 					<form action="layout/php/suscribe.php" method="post">
 						<fieldset>
 							<legend>Novedades</legend>
-							<input type="text" name="email" id="email" value="Escribe tu Email&hellip;"	size="100" onfocus="this.value=(this.value=='Escribe tu Email&hellip;')? '' : this.value ;" />
+							<input type="email" name="email" id="email" value="Escribe tu Email&hellip;"	size="100" onfocus="this.value=(this.value=='Escribe tu Email&hellip;')? '' : this.value ;" />
 							<input type="submit" name="news_go" id="news_go" value="Enviar" />
 						</fieldset>
 					</form>
-					<p>Para cancelar suscripción <a href="#">haz clic aquí &raquo;</a></p>
+					<!-- <p>Para cancelar suscripción <a href="#">haz clic aquí &raquo;</a></p> -->
 				</div>
 				<div class="footbox">
 					<h2>Nuestros Integrantes</h2>

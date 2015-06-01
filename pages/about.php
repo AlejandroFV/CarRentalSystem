@@ -94,8 +94,8 @@
 				<ol>
 					<li>Reservación por adelantado de un vehículo (duh!)</li>
 					<li>Registro y logueo de usuarios</li>
-					<li>Historial de vehículos adquiridos</li>
-					<li>Posibilidad de comentar y de valorar vehículos</li>
+					<li><s>Historial de vehículos adquiridos</s></li>
+					<li><s>Posibilidad de comentar y de valorar vehículos</s></li>
 					<li>Listado de vehículos mejor valorados</li>
 				</ol>
 			</div>

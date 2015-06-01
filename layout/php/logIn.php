@@ -1,7 +1,7 @@
 <?php
 	$email = $_POST['email'];
 	$password = $_POST['password'] ;
-	$password = md5($password);
+	$password = convert_uuencode($password);
 	$scriptQuery = "SELECT * FROM user WHERE email_user = '$email'";
 	require("connection.php");
 	$result = mysqli_query($con, $scriptQuery);
