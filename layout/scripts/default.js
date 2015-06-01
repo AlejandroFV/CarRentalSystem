@@ -3,16 +3,6 @@ function validateEmail(email) {
 	return re.test(email);
 }
 
-function validateForgotForm() {
-	var email = document.forms["form"]["email"].value;
-	if (validateEmail(email)) {
-		alert("Se han enviado instrucciones al correo: " + email);
-	} else {
-		alert("Por favor escriba una dirección de correo válida");
-	}
-	return false;
-}
-
 function validateLoginForm() {
 	var email = document.forms["form"]["email"].value;
 	var password = document.forms["form"]["password"].value;
