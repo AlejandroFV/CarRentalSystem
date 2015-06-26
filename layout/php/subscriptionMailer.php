@@ -7,7 +7,7 @@
 	$mail->Host = 'smtp.mail.com';
 	$mail->SMTPAuth = true;
 	$mail->Username = 'AlejandroFV@mail.com';
-	$mail->Password = convert_uudecode('(5$%/1#(P,#0`\n`\n');
+	$mail->Password = '';
 	$mail->SMTPSecure = 'tls';
 	$mail->Port = 587;
 
